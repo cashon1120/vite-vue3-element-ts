@@ -3,7 +3,7 @@ import { routes } from "../routes";
 import { useRoute } from "vue-router";
 const route = useRoute();
 const activePath = route.fullPath;
-const menu = routes[0].children;
+const menu = routes[1].children;
 const handleOpen = () => {};
 const handleClose = () => {};
 </script>

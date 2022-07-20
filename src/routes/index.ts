@@ -9,6 +9,10 @@ const NotFound = () => import("@/views/404.vue");
 
 export const routes: RouteRecordRaw[] = [
   {
+    path: "/login",
+    component: Login,
+  },
+  {
     path: "/",
     component: Layout,
     redirect: "/home",
@@ -43,10 +47,6 @@ export const routes: RouteRecordRaw[] = [
         ],
       },
     ],
-  },
-  {
-    path: "/login",
-    component: Login,
   },
   { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
 ];
