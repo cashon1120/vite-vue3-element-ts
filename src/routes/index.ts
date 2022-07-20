@@ -22,6 +22,7 @@ export const routes: RouteRecordRaw[] = [
         path: "/home",
         meta: {
           title: "首页",
+          icon: 'Edit'
         },
         component: Home,
       },
@@ -29,6 +30,7 @@ export const routes: RouteRecordRaw[] = [
         path: "/page",
         meta: {
           title: "页面",
+          icon: 'ArrowDownBold'
         },
         children: [
           {

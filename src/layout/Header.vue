@@ -2,14 +2,16 @@
 import { useStore } from "../store/index";
 const store = useStore();
 const handleUpdateToken = () => {
-  store.updateToken('')
-}
+  store.updateToken("");
+};
 </script>
 <template>
   <div class="wrapper">
     <div>logo</div>
-    <div>admin {{store.getToken}}</div>
-    <el-button @click="handleUpdateToken">更新</el-button>
+    <div class="right">
+      admin {{ store.getToken }}
+      <el-button @click="handleUpdateToken">更新</el-button>
+    </div>
   </div>
 </template>
 <style scope lang="scss">
@@ -18,5 +20,10 @@ const handleUpdateToken = () => {
   height: 50px;
   display: flex;
   align-items: center;
+  padding: 0 15px;
+  .right{
+    flex: 1;
+    text-align: right;
+  }
 }
 </style>
