@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { useStore } from "../store/index";
 
 const Layout = () => import("@/layout/Layout.vue");
 const Login = () => import("@/views/Login.vue");
@@ -57,6 +58,11 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
+  const token = useStore().getToken
+  if (to.path !== "/login" && !token) {
+    next("/login");
+    return;
+  }
   next();
 });
 
